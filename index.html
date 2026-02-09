@@ -86,7 +86,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/TS_1.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -169,21 +169,18 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Temporal Shift</h2> <br><br>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/TS_1.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/TS_2.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/TS_3.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/TS_4.png" alt="..." />
+
+                                    <button class="btn btn-outline-light btn-social mx-1" onclick="plusDivs(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <p class="mb-4 text-white">Temporal Shift: A university group project made in Unity. I was responsible for the gameplay and the camera programming for this project and it was showcased at the Falmouth University Games Expo</p>
+                                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:egdenham98@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -356,5 +353,24 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("img-fluid rounded mb-5");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+        }
+        </script>
     </body>
 </html>
